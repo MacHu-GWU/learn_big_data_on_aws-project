@@ -1,0 +1,18 @@
+# file management
+pathlib_mate                            # local file system
+smart_open
+s3pathlib                               # s3 file system
+
+Faker                                   # create dummy data
+pandas
+mpire                                   # multi process
+rich                                    # debug
+boto3                                   # aws SDK
+awswrangler
+
+sqlalchemy                              # SQL db
+pyathena
+PyAthena[Pandas]
+PyAthena[SQLAlchemy]
+prettytable                             # ascii table
+

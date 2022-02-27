@@ -1,0 +1,17 @@
+pathlib_mate
+smart_open
+s3pathlib
+
+Faker
+pandas
+mpire
+rich
+boto3
+awswrangler
+
+sqlalchemy
+pyathena
+PyAthena[Pandas]
+PyAthena[SQLAlchemy]
+prettytable
+
