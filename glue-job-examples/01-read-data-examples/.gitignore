@@ -1,4 +1,7 @@
 *.parquet
+<<<<<<< HEAD
 *.csv
 *.json
 *.zip
+=======
+>>>>>>> 635aea61030370f1c61cf039b9f81b9d843810f3
