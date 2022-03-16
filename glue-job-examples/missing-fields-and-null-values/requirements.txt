@@ -1,7 +1,0 @@
-attr
-pathlib_mate
-smart_open
-s3pathlib
-Faker
-awswrangler
-rich
