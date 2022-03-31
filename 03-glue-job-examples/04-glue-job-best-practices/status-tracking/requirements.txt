@@ -1,0 +1,4 @@
+smart_open==5.2.1
+s3pathlib==1.0.5
+pynamodb==5.1.0
+pynamodb_mate==5.1.0.1
