@@ -1,0 +1,123 @@
+# Reference:
+# - The pyproject.toml file: https://python-poetry.org/docs/pyproject/
+# - Dependency specification: https://python-poetry.org/docs/dependency-specification/
+[tool.poetry]
+name = "learn_big_data_on_aws"
+version = "0.1.1"
+description = "AWS Big Data Knowledge from My AWS Career since 2011."
+authors = ["Sanhe Hu <husanhe@gmail.com>"]
+
+# --- core dependencies for deployment
+[tool.poetry.dependencies]
+python = "3.10.*"
+# AWS Lambda event parser
+aws_lambda_event = "2.0.2"
+# create AWS console url
+aws_console_url = "0.7.5"
+botocore = "1.27.96"
+boto3 = "1.24.96"
+# advanced boto3 session manager
+boto_session_manager = "1.5.3"
+# helper functions
+boltons = "21.0.0"
+fixa = "0.7.1"
+# multi environment config management
+config_patterns = "1.0.2"
+# path manipulation
+pathlib_mate = " 1.2.1"
+# s3 object manipulation
+s3pathlib = "2.0.1"
+# smart IO
+smart-open = "6.2.0"
+# json parser that support comments
+superjson = "1.0.2"
+# AWS parameter store, secret manager integration
+pysecret = "2.2.2"
+# AWS parameter store, secret manager integration
+aws_glue_container_launcher = "0.1.1"
+
+# --- addtitional dependencies for development
+[tool.poetry.group.dev]
+optional = true
+
+
+[tool.poetry.group.dev.dependencies]
+# publish package to PyPI
+twine = "3.8.0"
+# build wheel distribution format
+wheel = "0.37.1"
+# beautiful formatting for console output
+rich = "12.6.0"
+# build CLI app made easy
+fire = "0.5.0"
+
+
+# --- addtitional dependencies for building documentations
+[tool.poetry.group.doc]
+optional = true
+
+
+[tool.poetry.group.doc.dependencies]
+Sphinx = "5.3.0"
+# enable jinja syntax in reStructuredText
+sphinx-jinja = "2.0.2"
+# add copy button to code block
+sphinx-copybutton = "0.5.1"
+# add additional design pattern to sphinx
+sphinx-design = "0.5.0"
+# the sphinx theme
+furo = "2023.03.27"
+# add jupyter notebook in sphinx doc
+nbsphinx = "0.8.12"
+# generate reStructuredText in Python
+rstobj = "1.2.1"
+# syntax highlight
+pygments = "2.15.1"
+# iPython
+ipython = "8.10.0"
+# automaticall generate .. toctree directives and API reference doc
+docfly = "2.0.1"
+# note: for furo-sphinx-search (https://github.com/harshil21/furo-sphinx-search)
+# you have to manually do ``pip install -r requirements-furo-sphinx-search.txt``
+# note: you need to install awscli to upload the documentation website to S3
+# awscli has werid dependency issue, so we install it out side of poetry
+
+
+# --- addtitional dependencies for testing
+[tool.poetry.group.test]
+optional = true
+
+
+[tool.poetry.group.test.dependencies]
+# pytest framework
+pytest = "6.2.5"
+# code coverage test
+pytest-cov = "2.12.1"
+
+
+# --- addtitional dependencies for automation shell scripts
+[tool.poetry.group.auto]
+optional = true
+
+[tool.poetry.group.auto.dependencies]
+# Python dependency management
+poetry = "1.2.2"
+# parse pyproject.toml file
+tomli = "2.0.0"
+# beautiful formatting for console output
+rich = "12.6.0"
+# build CLI app made easy
+fire = "0.5.0"
+# Python project ops automation
+pyproject_ops = ">=0.1.1,<1.0.0"
+# path manipulation
+pathlib_mate = "1.2.1"
+# AWS CodeCommit event parser, git utilities
+aws_codecommit = "1.4.1"
+# create AWS console url
+aws_console_url = "0.7.5"
+
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

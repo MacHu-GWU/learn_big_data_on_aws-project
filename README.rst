@@ -1,48 +1,8 @@
-Learn Big Data On AWS Project
+.. image:: https://img.shields.io/readthedocs/learn_aws
+    :target: https://learn-aws.readthedocs.io/
+
+Welcome to ``learn_aws`` Documentation
 ==============================================================================
+This repository contains all of the AWS-related experience, study notes, example code, architecture diagrams, and other materials that are from my career experience 2011. There are so many AWS services. I have been an subject matter expert (SME) in approximately 100 different services, covering almost all areas of the IT industry. However, it's impossible for me keep those knowledge fresh. Therefore, I documented my AWS knowledge in simple language that allow people who have no AWS experience quickly get started, for the future me. This way, I can search the document and refresh my knowledge to an expert level in 15 to 30 minutes.
 
-1
-
-了解你的目标
-------------------------------------------------------------------------------
-在 AWS 的 Big Data 生态中, 有这些相关的服务:
-
-- 存储:
-    - Data Store: AWS S3, 用于存储大量的原始数据文件, 或是处理后以大数据查询友好的格式 (例如 Parquet) 保存的数据文件.
-    - Data warehouse: AWS Redshift, AWS 的高性能数据仓库, 能在秒级查询 PB 级别的数据.
-- 分析:
-    - Serverless SQL for S3: AWS Athena, 无需昂贵的数据仓库, 直接使用廉价的 S3 存储数据, 并直接对 S3 上的数据用 SQL 进行查询
-- 管理:
-    - Catalog: AWS Glue Catalog, 通用型的 Data Catalog, 能用来保存位于 AWS 上的数据集, 也能用来保存非 AWS 上的数据集, 例如 微软 Oracle 的数据库, 以及 Hadoop 集群上的 HDFS.
-- 处理:
-    - EMR: AWS 管理的 Hadoop 集群. 目前主流的大数据处理框架是 Spark.
-    - ETL: AWS Glue ETL, serverless 的 Spark 集群.
-
-对于创业公司来说, 使用 serverless 的服务会非常有吸引力, 免除了管理基础设施的麻烦. 由于在启动阶段业务的负载很不稳定, 很难按需配置基础设施, 配置少了不够用, 配置多了浪费钱. 并且对于个人用户学习来说, 使用 serverless 的服务按使用量收费会比较节约成本. 所以推荐学习如下技术栈:
-
-- Data Lake: AWS S3
-- Data Catalog: AWS Glue Catalog
-- Data Processing: AWS Glue Job
-- Data Analytics: AWS Athena
-
-
-
-文档
-------------------------------------------------------------------------------
-
-- PySpark DataFrame API: https://spark.apache.org/docs/latest/api/python/reference/api/pyspark.sql.DataFrame.html
-- PySpark SQL, DataFrame and Datasets Guide: https://spark.apache.org/docs/latest/sql-programming-guide.html
-- AWS Glue ETL programming: https://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-python.html
-
-
-AWS Athena 知识点
-------------------------------------------------------------------------------
-
-
-Glue Read Data
-------------------------------------------------------------------------------
-
-- 从 S3 读取数据:
-    - 使用 `glueContext.create_dynamic_frame.from_options <https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-crawler-pyspark-extensions-dynamic-frame-reader.html#aws-glue-api-crawler-pyspark-extensions-dynamic-frame-reader-from_options>`_ API 不使用 Catalog, 直接从 S3 读取数据.
-    - `from_options <https://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-etl-connect.html#aws-glue-programming-etl-connect-s3>`_ API 的详细参数说明. 注意, 不使用
-    - 使用 `glueContext.create_dynamic_frame.from_catalog <https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-crawler-pyspark-extensions-dynamic-frame-reader.html#aws-glue-api-crawler-pyspark-extensions-dynamic-frame-reader-from_catalog>`_, 根据 Glue Catalog 中的定义读取数据.
+**这篇文档参照** `官网上 Products 一栏里的分类 <https://aws.amazon.com/>`_, **为每一类 AWS Services 都创建了子文件夹 (1 级目录), 子文件夹下的子文件夹 (2 级目录) 则是一个个具体的 AWS 服务. 例如 Compute (1 级目录) / EC2 (2 级目录)**. 在每个具体的服务的目录下, 通常最多再延伸出两级目录 (3 级目录 和 4级目录). 3 级目录通常是这个具体服务下的一些较大的话题, 例如常见的如何创建, 管理, 删除资源, 如何 Scale, 如何确保安全等. 而 4级目录则是大话题下的具体话题, 也是大多数的有干货内容的的文档所在的级别.

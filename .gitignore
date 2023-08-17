@@ -3,7 +3,12 @@ learn_big_data_on_aws_venv/
 learn_big_data_on_aws.egg-info/
 learn_big_data_on_aws-*/
 tmp/
+cdk.out/
+*.drawio.bkp
+*.drawio.temp
+.cloc-list-file
 *.parquet
+*.csv
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
