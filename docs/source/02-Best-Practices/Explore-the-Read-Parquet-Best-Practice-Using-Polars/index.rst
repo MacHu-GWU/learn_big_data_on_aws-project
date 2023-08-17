@@ -34,7 +34,7 @@ Parquet 作为主流大数据存储格式, 它的 Columnar data format 和 Row G
 
 学到的经验
 ------------------------------------------------------------------------------
-- 对于本地文件, polars.scan_parquet > polars.read_parquet > pandas.read_parquet > pandas.read_parquet + use row group filter. 并且 scan_parquet 跟其他几个相比存在数量级的差距. 这是因为 scan_parquet 使用了 lazy load 的策略.
+- 对于本地文件, polars.scan_parquet > polars.read_parquet > pandas.read_parquet > pandas.read_parquet + use row group filter. 速度级都在 0.1 秒以内. 其中 scan_parquet 达到了 0.02 秒. 并且 scan_parquet 跟其他几个相比存在数量级的差距. 这是因为 scan_parquet 使用了 lazy load 的策略.
 - s3_client.get_object 是单线程, 在个人电脑上大约是 5-10MB / S, 而 s3_client.download_file 是多线程多个 CPU 一起下载, 速度要快很多.
 - s3path.open, smart_open, s3fs.open 这些都是用的单线程
 - 先将文件用 s3_client.download_file 下载到本地, 再进行读取的速度会比直接从 S3 读取要快很多, 因为目前没有多线程创建多个 buffer 来读取 S3 的方法.
