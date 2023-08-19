@@ -14,13 +14,13 @@ python = "3.10.*"
 aws_lambda_event = "2.0.2"
 # create AWS console url
 aws_console_url = "0.7.5"
-botocore = "1.27.96"
-boto3 = "1.24.96"
+botocore = "1.29.165"
+boto3 = "1.26.165"
 # advanced boto3 session manager
 boto_session_manager = "1.5.3"
 # helper functions
 boltons = "21.0.0"
-fixa = "0.7.1"
+fixa = "0.8.1"
 # multi environment config management
 config_patterns = "1.0.2"
 # path manipulation
@@ -35,6 +35,8 @@ superjson = "1.0.2"
 pysecret = "2.2.2"
 # AWS parameter store, secret manager integration
 aws_glue_container_launcher = "0.1.1"
+# polars dataframe library
+polars = "0.17.15"
 
 # --- addtitional dependencies for development
 [tool.poetry.group.dev]

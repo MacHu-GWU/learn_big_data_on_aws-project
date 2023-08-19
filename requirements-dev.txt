@@ -210,9 +210,9 @@ pygments==2.15.1 ; python_full_version >= "3.10.0" and python_full_version < "3.
 pywin32-ctypes==0.2.2 ; python_full_version >= "3.10.0" and python_full_version < "3.11.0" and sys_platform == "win32" \
     --hash=sha256:3426e063bdd5fd4df74a14fa3cf80a0b42845a87e1d1e81f6549f9daec593a60 \
     --hash=sha256:bf490a1a709baf35d688fe0ecf980ed4de11d2b3e37b51e5442587a75d9957e7
-readme-renderer==40.0 ; python_full_version >= "3.10.0" and python_full_version < "3.11.0" \
-    --hash=sha256:9f77b519d96d03d7d7dce44977ba543090a14397c4f60de5b6eb5b8048110aa4 \
-    --hash=sha256:e18feb2a1e7706f2865b81ebb460056d93fb29d69daa10b223c00faa7bd9a00a
+readme-renderer==41.0 ; python_full_version >= "3.10.0" and python_full_version < "3.11.0" \
+    --hash=sha256:4f4b11e5893f5a5d725f592c5a343e0dc74f5f273cb3dcf8c42d9703a27073f7 \
+    --hash=sha256:a38243d5b6741b700a850026e62da4bd739edc7422071e95fd5c4bb60171df86
 requests-toolbelt==0.9.1 ; python_full_version >= "3.10.0" and python_full_version < "3.11.0" \
     --hash=sha256:380606e1d10dc85c3bd47bf5a6095f815ec007be7a8b69c878507068df059e6f \
     --hash=sha256:968089d4584ad4ad7c171454f0a5c6dac23971e9472521ea3b6d49d610aa6fc0

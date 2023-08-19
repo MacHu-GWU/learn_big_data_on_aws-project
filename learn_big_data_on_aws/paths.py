@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+import sys
 from pathlib_mate import Path
 
 dir_here = Path.dir_here(__file__)
@@ -13,6 +14,7 @@ dir_home = Path.home() # ${HOME}
 # ------------------------------------------------------------------------------
 dir_venv = dir_project_root / ".venv"
 dir_venv_bin = dir_venv / "bin"
+dir_venv_site_packages = dir_venv / "lib" / f"python{sys.version_info.major}.{sys.version_info.minor}" / "site-packages"
 
 # virtualenv executable paths
 bin_pytest = dir_venv_bin / "pytest"
