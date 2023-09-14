@@ -1,7 +1,4 @@
 DuckDB
 ==============================================================================
-
-
-Overview
-------------------------------------------------------------------------------
-`DuckDB <https://duckdb.org/>`_ 官网称自己为 in-process SQL OLAP database management system. 
+.. autotoctree::
+    :maxdepth: 1
